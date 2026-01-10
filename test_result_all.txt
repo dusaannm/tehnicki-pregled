@@ -1,0 +1,80 @@
+﻿
+   PASS  Tests\Unit\ExampleTest
+  Γ£ô that trueΓÇª  0.01s  
+
+   PASS  Tests\Feature\Auth\AuthenticationTest
+  Γ£ô login screΓÇª 0.68s  
+  Γ£ô users canΓÇª  0.11s  
+  Γ£ô users canΓÇª  0.25s  
+  Γ£ô users canΓÇª  0.04s  
+
+   PASS  Tests\Feature\Auth\EmailVerificationTest
+  Γ£ô email veriΓÇª 0.08s  
+  Γ£ô email canΓÇª  0.07s  
+  Γ£ô email is nΓÇª 0.05s  
+
+   PASS  Tests\Feature\Auth\PasswordConfirmationTest
+  Γ£ô confirm paΓÇª 0.05s  
+  Γ£ô password cΓÇª 0.04s  
+  Γ£ô password iΓÇª 0.24s  
+
+   PASS  Tests\Feature\Auth\PasswordResetTest
+  Γ£ô reset passΓÇª 0.05s  
+  Γ£ô reset passΓÇª 0.24s  
+  Γ£ô reset passΓÇª 0.26s  
+  Γ£ô password cΓÇª 0.27s  
+
+   PASS  Tests\Feature\Auth\PasswordUpdateTest
+  Γ£ô password cΓÇª 0.04s  
+  Γ£ô correct paΓÇª 0.05s  
+
+   PASS  Tests\Feature\Auth\RegistrationTest
+  Γ£ô registratiΓÇª 0.06s  
+  Γ£ô new usersΓÇª  0.04s  
+
+   PASS  Tests\Feature\BookingCreatesTerminTest
+  Γ£ô user can bΓÇª 0.04s  
+
+   PASS  Tests\Feature\BookingPreventsDuplicateSlotTest
+  Γ£ô cannot booΓÇª 0.04s  
+
+   PASS  Tests\Feature\ExampleTest
+  Γ£ô the applicΓÇª 0.04s  
+
+   PASS  Tests\Feature\Http\Controllers\TerminControllerTest
+  Γ£ô index dispΓÇª 0.08s  
+  Γ£ô create disΓÇª 0.06s  
+  Γ£ô store saveΓÇª 0.04s  
+  Γ£ô show displΓÇª 0.06s  
+  Γ£ô edit displΓÇª 0.06s  
+  Γ£ô update redΓÇª 0.04s  
+  Γ£ô destroy deΓÇª 0.04s  
+
+   PASS  Tests\Feature\Http\Controllers\UslugaControllerTest
+  Γ£ô index dispΓÇª 0.06s  
+  Γ£ô create disΓÇª 0.07s  
+  Γ£ô store saveΓÇª 0.04s  
+  Γ£ô show displΓÇª 0.14s  
+  Γ£ô edit displΓÇª 0.06s  
+  Γ£ô update redΓÇª 0.04s  
+  Γ£ô destroy deΓÇª 0.04s  
+
+   PASS  Tests\Feature\Http\Controllers\VoziloControllerTest
+  Γ£ô index dispΓÇª 0.06s  
+  Γ£ô create disΓÇª 0.14s  
+  Γ£ô store saveΓÇª 0.04s  
+  Γ£ô show displΓÇª 0.13s  
+  Γ£ô edit displΓÇª 0.06s  
+  Γ£ô update redΓÇª 0.04s  
+  Γ£ô destroy deΓÇª 0.04s  
+
+   PASS  Tests\Feature\ProfileTest
+  Γ£ô profile paΓÇª 0.08s  
+  Γ£ô profile inΓÇª 0.04s  
+  Γ£ô email veriΓÇª 0.04s  
+  Γ£ô user can dΓÇª 0.04s  
+  Γ£ô correct paΓÇª 0.04s  
+
+  Tests:    48 passed (137 assertions)
+  Duration: 5.13s
+

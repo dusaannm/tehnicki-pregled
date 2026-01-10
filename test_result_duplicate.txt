@@ -1,0 +1,7 @@
+﻿
+   PASS  Tests\Feature\BookingPreventsDuplicateSlotTest
+  Γ£ô cannot bookΓÇª  0.37s  
+
+  Tests:    1 passed (3 assertions)
+  Duration: 0.51s
+

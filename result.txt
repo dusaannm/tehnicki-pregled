@@ -1,0 +1,68 @@
+﻿
+   PASS  Tests\Unit\ExampleTest
+  Γ£ô that trueΓÇª  0.01s  
+
+   PASS  Tests\Feature\Auth\AuthenticationTest
+  Γ£ô login screΓÇª 0.36s  
+  Γ£ô users canΓÇª  0.07s  
+  Γ£ô users canΓÇª  0.23s  
+  Γ£ô users canΓÇª  0.02s  
+
+   PASS  Tests\Feature\Auth\EmailVerificationTest
+  Γ£ô email veriΓÇª 0.03s  
+  Γ£ô email canΓÇª  0.02s  
+  Γ£ô email is nΓÇª 0.02s  
+
+   PASS  Tests\Feature\Auth\PasswordConfirmationTest
+  Γ£ô confirm paΓÇª 0.03s  
+  Γ£ô password cΓÇª 0.02s  
+  Γ£ô password iΓÇª 0.22s  
+
+   PASS  Tests\Feature\Auth\PasswordResetTest
+  Γ£ô reset passΓÇª 0.03s  
+  Γ£ô reset passΓÇª 0.23s  
+  Γ£ô reset passΓÇª 0.24s  
+  Γ£ô password cΓÇª 0.23s  
+
+   PASS  Tests\Feature\Auth\PasswordUpdateTest
+  Γ£ô password cΓÇª 0.03s  
+  Γ£ô correct paΓÇª 0.02s  
+
+   PASS  Tests\Feature\Auth\RegistrationTest
+  Γ£ô registratiΓÇª 0.03s  
+  Γ£ô new usersΓÇª  0.02s  
+
+   PASS  Tests\Feature\BookingCreatesTerminTest
+  Γ£ô user can bΓÇª 0.02s  
+
+   PASS  Tests\Feature\BookingPreventsDuplicateSlotTest
+  Γ£ô cannot booΓÇª 0.02s  
+
+   PASS  Tests\Feature\ExampleTest
+  Γ£ô the applicΓÇª 0.02s  
+
+   FAIL  Tests\Feature\Http\Controllers\TerminControllerTest
+  Γ£ô index dispΓÇª 0.04s  
+  Γ£ô create disΓÇª 0.03s  
+  Γ¿» store saveΓÇª 0.04s  
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\FeΓÇª   
+  Failed asserting that actual size 0 matches expected size 1.
+
+  at tests\Feature\Http\Controllers\TerminControllerTest.php:72
+     68Γûò             ->where('vozilo_id', $vozilo->id)
+     69Γûò             ->where('datum', $datum->toDateString())
+     70Γûò             ->where('vreme', $vreme)
+     71Γûò             ->get();
+  Γ₧£  72Γûò         $this->assertCount(1, $termins);
+     73Γûò         $termin = $termins->first();
+     74Γûò 
+     75Γûò         $response->assertRedirect(route('admin.termini.index'));
+     76Γûò     }
+
+  1   tests\Feature\Http\Controllers\TerminControllerTest.php:72
+
+
+  Tests:    1 failed, 24 passed, [2m23 pending[22m (54 assertions)
+  Duration: 2.28s
+

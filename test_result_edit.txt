@@ -1,0 +1,39 @@
+﻿
+   FAIL  Tests\Feature\Http\Controllers\TerminControllerTest
+  Γ£ô index displaΓÇª 0.50s  
+  Γ£ô create displΓÇª 0.03s  
+  Γ£ô store savesΓÇª  0.03s  
+  Γ£ô show displayΓÇª 0.04s  
+  Γ£ô edit displayΓÇª 0.71s  
+  Γ¿» update redirΓÇª 0.54s  
+  Γ£ô destroy deleΓÇª 0.03s  
+  ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ  
+   FAILED  Tests\FeatΓÇª   
+  Failed asserting that two strings are equal.
+
+The following errors occurred during the last request:
+
+The registracija field is required.
+The marka model field is required.
+
+--- Expected
++++ Actual
+@@ @@
+-'http://localhost/admin/termini'
++'http://localhost'
+
+  at tests\Feature\Http\Controllers\TerminControllerTest.php:127
+    123Γûò         ]);
+    124Γûò 
+    125Γûò         $termin->refresh();
+    126Γûò 
+  Γ₧£ 127Γûò         $response->assertRedirect(route('admin.termini.index'));
+    128Γûò 
+    129Γûò         $this->assertEquals($user->id, $termin->user_id);
+    130Γûò         $this->assertEquals($usluga->id, $termin->usluga_id);
+    131Γûò         $this->assertEquals($vozilo->id, $termin->vozilo_id);
+
+
+  Tests:    1 failed, 6 passed (19 assertions)
+  Duration: 2.02s
+

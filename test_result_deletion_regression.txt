@@ -1,0 +1,22 @@
+﻿
+   PASS  Tests\Feature\Http\Controllers\UslugaControllerTest
+  Γ£ô index displaΓÇª 0.39s  
+  Γ£ô create displΓÇª 0.84s  
+  Γ£ô store savesΓÇª  0.03s  
+  Γ£ô show displayΓÇª 0.11s  
+  Γ£ô edit displayΓÇª 0.04s  
+  Γ£ô update redirΓÇª 0.02s  
+  Γ£ô destroy deleΓÇª 0.05s  
+
+   PASS  Tests\Feature\Http\Controllers\VoziloControllerTest
+  Γ£ô index displaΓÇª 0.04s  
+  Γ£ô create displΓÇª 0.06s  
+  Γ£ô store savesΓÇª  0.02s  
+  Γ£ô show displayΓÇª 0.04s  
+  Γ£ô edit displayΓÇª 0.03s  
+  Γ£ô update redirΓÇª 0.02s  
+  Γ£ô destroy deleΓÇª 0.02s  
+
+  Tests:    14 passed (43 assertions)
+  Duration: 1.90s
+

@@ -1,0 +1,13 @@
+﻿
+   PASS  Tests\Feature\Http\Controllers\UslugaControllerTest
+  Γ£ô index dispΓÇª 0.39s  
+  Γ£ô create disΓÇª 0.78s  
+  Γ£ô store saveΓÇª 0.03s  
+  Γ£ô show displΓÇª 0.03s  
+  Γ£ô edit displΓÇª 0.77s  
+  Γ£ô update redΓÇª 0.02s  
+  Γ£ô destroy deΓÇª 0.02s  
+
+  Tests:    7 passed (23 assertions)
+  Duration: 2.18s
+

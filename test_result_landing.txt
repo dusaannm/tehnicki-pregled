@@ -1,0 +1,9 @@
+﻿
+   PASS  Tests\Feature\LandingPageTest
+  Γ£ô landing pageΓÇª 0.51s  
+  Γ£ô zakazi buttoΓÇª 0.02s  
+  Γ£ô zakazi buttoΓÇª 0.04s  
+
+  Tests:    3 passed (6 assertions)
+  Duration: 0.71s
+

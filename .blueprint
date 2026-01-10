@@ -1,0 +1,52 @@
+created:
+    - app/Http/Controllers/UslugaController.php
+    - app/Http/Controllers/VoziloController.php
+    - app/Http/Controllers/TerminController.php
+    - app/Http/Controllers/PorukaController.php
+    - database/factories/UslugaFactory.php
+    - database/factories/VoziloFactory.php
+    - database/factories/TerminFactory.php
+    - database/factories/PorukaFactory.php
+    - database/migrations/2026_01_08_011052_create_uslugas_table.php
+    - database/migrations/2026_01_08_011053_create_vozilos_table.php
+    - database/migrations/2026_01_08_011054_create_termins_table.php
+    - database/migrations/2026_01_08_011055_create_porukas_table.php
+    - app/Models/Usluga.php
+    - app/Models/Vozilo.php
+    - app/Models/Termin.php
+    - app/Models/Poruka.php
+    - tests/Feature/Http/Controllers/UslugaControllerTest.php
+    - tests/Feature/Http/Controllers/VoziloControllerTest.php
+    - tests/Feature/Http/Controllers/TerminControllerTest.php
+    - tests/Feature/Http/Controllers/PorukaControllerTest.php
+    - app/Http/Requests/UslugaStoreRequest.php
+    - app/Http/Requests/UslugaUpdateRequest.php
+    - app/Http/Requests/VoziloStoreRequest.php
+    - app/Http/Requests/VoziloUpdateRequest.php
+    - app/Http/Requests/TerminStoreRequest.php
+    - app/Http/Requests/TerminUpdateRequest.php
+    - app/Http/Requests/PorukaStoreRequest.php
+    - app/Http/Requests/PorukaUpdateRequest.php
+    - resources/views/usluga/index.blade.php
+    - resources/views/usluga/create.blade.php
+    - resources/views/usluga/show.blade.php
+    - resources/views/usluga/edit.blade.php
+    - resources/views/vozilo/index.blade.php
+    - resources/views/vozilo/create.blade.php
+    - resources/views/vozilo/show.blade.php
+    - resources/views/vozilo/edit.blade.php
+    - resources/views/termin/index.blade.php
+    - resources/views/termin/create.blade.php
+    - resources/views/termin/show.blade.php
+    - resources/views/termin/edit.blade.php
+    - resources/views/poruka/index.blade.php
+    - resources/views/poruka/create.blade.php
+    - resources/views/poruka/show.blade.php
+    - resources/views/poruka/edit.blade.php
+updated:
+    - routes/web.php
+models:
+    Usluga: { naziv: 'string:120', opis: 'text nullable', cena: 'decimal:8,2', trajanje_min: 'integer default:30', featured: 'boolean default:false', timestamps: timestamps }
+    Vozilo: { user_id: 'id foreign nullable', registracija: 'string:20 nullable', marka_model: 'string:120', godina: 'integer nullable', slika: 'string nullable', timestamps: timestamps }
+    Termin: { user_id: 'id foreign', usluga_id: 'id foreign', vozilo_id: 'id foreign', datum: date, vreme: time, status: 'enum:pending,approved,cancelled,done default:pending', napomena: 'text nullable', timestamps: timestamps }
+    Poruka: { user_id: 'id foreign nullable', ime: 'string:80', email: 'string:120', telefon: 'string:30 nullable', poruka: text, timestamps: timestamps }

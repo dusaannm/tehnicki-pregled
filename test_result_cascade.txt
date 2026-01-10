@@ -1,0 +1,8 @@
+﻿
+   PASS  Tests\Feature\CascadeDeletionTest
+  Γ£ô deleting uΓÇª 0.37s  
+  Γ£ô deleting vΓÇª 0.02s  
+
+  Tests:    2 passed (12 assertions)
+  Duration: 0.53s
+

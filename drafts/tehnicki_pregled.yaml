@@ -1,0 +1,44 @@
+models:
+  Usluga:
+    naziv: string:120
+    opis: text nullable
+    cena: decimal:8,2
+    trajanje_min: integer default:30
+    featured: boolean default:false
+    timestamps: true
+
+  Vozilo:
+    user_id: id foreign nullable
+    registracija: string:20 nullable
+    marka_model: string:120
+    godina: integer nullable
+    slika: string nullable
+    timestamps: true
+
+  Termin:
+    user_id: id foreign
+    usluga_id: id foreign
+    vozilo_id: id foreign
+    datum: date
+    vreme: time
+    status: enum:pending,approved,cancelled,done default:pending
+    napomena: text nullable
+    timestamps: true
+
+  Poruka:
+    user_id: id foreign nullable
+    ime: string:80
+    email: string:120
+    telefon: string:30 nullable
+    poruka: text
+    timestamps: true
+
+controllers:
+  UslugaController:
+    resource: web
+  VoziloController:
+    resource: web
+  TerminController:
+    resource: web
+  PorukaController:
+    resource: web

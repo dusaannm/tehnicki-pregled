@@ -1,0 +1,12 @@
+﻿
+   PASS  Tests\Feature\LandingPageTest
+  Γ£ô landing paΓÇª 0.35s  
+  Γ£ô zakazi butΓÇª 0.02s  
+  Γ£ô zakazi butΓÇª 0.05s  
+
+   PASS  Tests\Feature\ExampleTest
+  Γ£ô the applicΓÇª 0.02s  
+
+  Tests:    4 passed (8 assertions)
+  Duration: 0.58s
+

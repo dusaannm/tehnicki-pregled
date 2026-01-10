@@ -1,0 +1,13 @@
+﻿
+   PASS  Tests\Feature\Http\Controllers\TerminControllerTest
+  Γ£ô index displaΓÇª 0.76s  
+  Γ£ô create displΓÇª 0.07s  
+  Γ£ô store savesΓÇª  0.05s  
+  Γ£ô show displayΓÇª 0.32s  
+  Γ£ô edit displayΓÇª 0.06s  
+  Γ£ô update redirΓÇª 0.05s  
+  Γ£ô destroy deleΓÇª 0.04s  
+
+  Tests:    7 passed (25 assertions)
+  Duration: 1.58s
+

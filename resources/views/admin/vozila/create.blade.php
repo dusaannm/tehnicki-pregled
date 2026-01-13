@@ -7,17 +7,25 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-surface overflow-hidden shadow-sharp border border-gray-200 sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <form action="{{ route('admin.vozila.store') }}" method="POST">
+                    <form action="{{ route('admin.vozila.store') }}" method="POST" class="space-y-6">
                         @csrf
-                        <div class="mb-4">
-                            <label>Marka i Model <input type="text" name="marka_model" /></label>
+                        <div>
+                            <x-input-label for="marka_model" :value="__('Marka i Model')" />
+                            <x-text-input id="marka_model" class="block mt-1 w-full" type="text" name="marka_model"
+                                required />
                         </div>
-                        <div class="mb-4">
-                            <label>Registracija <input type="text" name="registracija" /></label>
+                        <div>
+                            <x-input-label for="registracija" :value="__('Registracija')" />
+                            <x-text-input id="registracija" class="block mt-1 w-full" type="text" name="registracija"
+                                required />
                         </div>
-                        <button type="submit">Sačuvaj</button>
+                        <div class="flex items-center justify-end">
+                            <x-primary-button>
+                                {{ __('Sačuvaj') }}
+                            </x-primary-button>
+                        </div>
                     </form>
                 </div>
             </div>

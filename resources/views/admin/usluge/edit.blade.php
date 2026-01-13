@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-surface overflow-hidden shadow-sharp border border-gray-200 sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <form action="{{ route('admin.usluge.update', $usluga) }}" method="POST" class="space-y-6">
                         @csrf
@@ -23,7 +23,7 @@
                         <div>
                             <x-input-label for="opis" :value="__('Opis')" />
                             <textarea id="opis" name="opis" rows="3"
-                                class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">{{ old('opis', $usluga->opis) }}</textarea>
+                                class="mt-1 block w-full border-gray-300 focus:border-primary-500 focus:ring-primary-500 rounded-md shadow-sm">{{ old('opis', $usluga->opis) }}</textarea>
                             <x-input-error :messages="$errors->get('opis')" class="mt-2" />
                         </div>
 
@@ -45,7 +45,7 @@
 
                         <div class="flex items-center">
                             <input id="featured" type="checkbox" name="featured" value="1"
-                                class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" {{ old('featured', $usluga->featured) ? 'checked' : '' }}>
+                                class="rounded border-gray-300 text-primary-600 shadow-sm focus:ring-primary-500" {{ old('featured', $usluga->featured) ? 'checked' : '' }}>
                             <label for="featured"
                                 class="ml-2 text-sm text-gray-600">{{ __('Izdvojeno na početnoj') }}</label>
                         </div>

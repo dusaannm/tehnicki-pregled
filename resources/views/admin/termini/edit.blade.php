@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-surface overflow-hidden shadow-sharp border border-gray-200 sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <form action="{{ route('admin.termini.update', $termin) }}" method="POST" class="space-y-6">
                         @csrf
@@ -23,7 +23,7 @@
                             <div>
                                 <x-input-label for="vreme" :value="__('Vreme')" />
                                 <select name="vreme" id="vreme"
-                                    class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
+                                    class="mt-1 block w-full border-gray-300 focus:border-primary-500 focus:ring-primary-500 rounded-md shadow-sm"
                                     required>
                                     @foreach($availableSlots as $slot)
                                         <option value="{{ $slot }}" {{ old('vreme', $termin->vreme) == $slot ? 'selected' : '' }}>
@@ -51,7 +51,7 @@
                         <div>
                             <x-input-label for="status" :value="__('Status')" />
                             <select id="status" name="status"
-                                class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                class="mt-1 block w-full border-gray-300 focus:border-primary-500 focus:ring-primary-500 rounded-md shadow-sm">
                                 <option value="pending" {{ $termin->status == 'pending' ? 'selected' : '' }}>Na čekanju
                                 </option>
                                 <option value="approved" {{ $termin->status == 'approved' ? 'selected' : '' }}>Potvrđen
@@ -65,7 +65,7 @@
                         <div>
                             <x-input-label for="napomena" :value="__('Napomena')" />
                             <textarea id="napomena" name="napomena" rows="3"
-                                class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">{{ old('napomena', $termin->napomena) }}</textarea>
+                                class="mt-1 block w-full border-gray-300 focus:border-primary-500 focus:ring-primary-500 rounded-md shadow-sm">{{ old('napomena', $termin->napomena) }}</textarea>
                         </div>
 
                         <!-- Hidden required fields to pass validation if not changed -->

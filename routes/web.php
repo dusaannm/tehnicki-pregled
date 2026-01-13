@@ -45,11 +45,11 @@ Route::middleware('auth')->group(function () {
  */
 Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::resource('usluge', UslugaController::class)->parameters(['usluge' => 'usluga']);
-    Route::resource('vozila', VoziloController::class)->parameters(['vozila' => 'vozilo']);
+    Route::resource('klijenti', \App\Http\Controllers\Admin\ClientController::class)->parameters(['klijenti' => 'user']);
     Route::resource('termini', TerminController::class)->parameters([
         'termini' => 'termin',
     ]);
     Route::resource('poruke', PorukaController::class)->parameters(['poruke' => 'poruka']);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

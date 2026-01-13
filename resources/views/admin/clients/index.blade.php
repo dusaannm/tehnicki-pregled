@@ -1,19 +1,14 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-2xl text-gray-800 leading-tight">
-            {{ __('Upravljanje Uslugama') }}
-        </h2>
+        <div class="flex justify-between items-center">
+            <h2 class="font-semibold text-2xl text-gray-800 leading-tight">
+                {{ __('Klijenti') }}
+            </h2>
+        </div>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex justify-end mb-6">
-                <a href="{{ route('admin.usluge.create') }}"
-                    class="px-5 py-2.5 bg-primary-600 rounded-md font-bold text-sm text-white uppercase tracking-wider hover:bg-primary-700 shadow-sm transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                    Nova Usluga
-                </a>
-            </div>
-
             <div class="bg-surface overflow-hidden shadow-sharp border border-gray-200 sm:rounded-lg">
                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200">
@@ -21,23 +16,19 @@
                             <tr>
                                 <th
                                     class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-                                    Naziv
+                                    Ime i Prezime
                                 </th>
                                 <th
                                     class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-                                    Cena
+                                    Email
                                 </th>
                                 <th
                                     class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-                                    Trajanje
+                                    Telefon
                                 </th>
                                 <th
                                     class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-                                    Opis
-                                </th>
-                                <th
-                                    class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-                                    Status
+                                    Datum Registracije
                                 </th>
                                 <th
                                     class="px-6 py-4 text-right text-xs font-bold text-gray-500 uppercase tracking-wider">
@@ -46,42 +37,28 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                            @foreach($usluge as $u)
+                            @foreach($users as $user)
                                 <tr class="hover:bg-gray-50 transition-colors duration-200">
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="text-sm font-semibold text-gray-900">{{ $u->naziv }}</div>
+                                        <div class="text-sm font-semibold text-gray-900">{{ $user->name }}</div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="text-sm text-gray-700 font-medium">{{ number_format($u->cena, 2) }}
-                                            RSD</div>
+                                        <div class="text-sm text-gray-500">{{ $user->email }}</div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2.5 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-700 border border-gray-200">
-                                            {{ $u->trajanje_min }} min
-                                        </span>
+                                        <div class="text-sm text-gray-900">{{ $user->phone ?? '-' }}</div>
                                     </td>
-                                    <td class="px-6 py-4">
-                                        <div class="text-sm text-gray-500 max-w-xs truncate" title="{{ $u->opis }}">
-                                            {{ $u->opis }}
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        @if($u->featured)
-                                            <span
-                                                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-md bg-primary-50 text-primary-700 border border-primary-200">
-                                                Izdvojeno
-                                            </span>
-                                        @endif
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        {{ $user->created_at->format('d.m.Y') }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <div class="flex justify-end items-center gap-3">
-                                            <a href="{{ route('admin.usluge.edit', $u) }}"
+                                            <a href="{{ route('admin.klijenti.edit', $user) }}"
                                                 class="text-primary-600 hover:text-primary-900 font-semibold hover:underline">
                                                 Izmeni
                                             </a>
-                                            <form action="{{ route('admin.usluge.destroy', $u) }}" method="POST"
-                                                onsubmit="return confirm('Da li ste sigurni da želite da obrišete ovu uslugu?');">
+                                            <form action="{{ route('admin.klijenti.destroy', $user) }}" method="POST"
+                                                onsubmit="return confirm('Da li ste sigurni da želite da obrišete korisnika?');">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
@@ -95,6 +72,12 @@
                             @endforeach
                         </tbody>
                     </table>
+
+                    @if($users->isEmpty())
+                        <div class="p-8 text-center text-gray-500">
+                            Nema registrovanih klijenata.
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

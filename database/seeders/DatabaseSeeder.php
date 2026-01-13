@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
             UslugaSeeder::class,
             VoziloSeeder::class,
             TerminSeeder::class,
+            PorukaSeeder::class, // optional ali top je da imaš i poruke popunjene
         ]);
     }
 }

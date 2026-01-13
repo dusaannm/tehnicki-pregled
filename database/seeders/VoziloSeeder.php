@@ -12,9 +12,9 @@ class VoziloSeeder extends Seeder
     {
         Vozilo::query()->delete();
 
-        $user = User::where('role', 'user')->first();
+        $user = User::where('email', 'marko@gmail.com')->first();
 
-        if (! $user) {
+        if (!$user) {
             return;
         }
 

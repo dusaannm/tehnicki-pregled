@@ -14,11 +14,11 @@ class TerminSeeder extends Seeder
     {
         Termin::query()->delete();
 
-        $user = User::where('role', 'user')->first();
+        $user = User::where('email', 'dusan@gmail.com')->first();
         $usluga = Usluga::first();
         $vozilo = Vozilo::first();
 
-        if (! $user || ! $usluga || ! $vozilo) {
+        if (!$user || !$usluga || !$vozilo) {
             return;
         }
 

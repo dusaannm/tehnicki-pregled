@@ -16,7 +16,7 @@ class VoziloFactory extends Factory
             'user_id' => User::factory(),
             'registracija' => fake()->regexify('[A-Za-z0-9]{20}'),
             'marka_model' => fake()->regexify('[A-Za-z0-9]{120}'),
-            'godina' => fake()->numberBetween(-10000, 10000),
+            'godina' => fake()->numberBetween(1900, date('Y')),
             'slika' => fake()->word(),
         ];
     }

@@ -5,7 +5,6 @@ use App\Http\Controllers\PorukaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TerminController;
 use App\Http\Controllers\UslugaController;
-use App\Http\Controllers\VoziloController;
 use App\Models\Usluga;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
@@ -50,6 +49,7 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
         'termini' => 'termin',
     ]);
     Route::resource('poruke', PorukaController::class)->parameters(['poruke' => 'poruka']);
+    Route::resource('vozila', \App\Http\Controllers\VoziloController::class)->parameters(['vozila' => 'vozilo']);
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

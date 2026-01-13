@@ -18,7 +18,7 @@ class TerminSeeder extends Seeder
         $usluga = Usluga::first();
         $vozilo = Vozilo::first();
 
-        if (!$user || !$usluga || !$vozilo) {
+        if (! $user || ! $usluga || ! $vozilo) {
             return;
         }
 

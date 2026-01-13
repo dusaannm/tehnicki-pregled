@@ -14,7 +14,7 @@ class VoziloSeeder extends Seeder
 
         $user = User::where('email', 'marko@gmail.com')->first();
 
-        if (!$user) {
+        if (! $user) {
             return;
         }
 
